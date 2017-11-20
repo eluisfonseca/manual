@@ -1,7 +1,12 @@
 $red: #f00;
 $green: #090;
 $blue: #00f;
+$dark-gray: #777;
 
 .color-red {
-  color: red;
+  color: $red;
+}
+
+.background-dark-gray {
+  background-color: $dark-gray;
 }

@@ -1,0 +1,39 @@
+.sidebar {
+  display: inline-block;
+  width: 200px;
+  height: 100%;
+  padding: 20px;
+}
+
+input[type=checkbox] {
+  display: none;
+  
+  + label {
+    background-color: transparent;
+    transition: background-color .5s linear;
+    
+    &:hover {
+      background-color: pink;
+    }
+    
+    & > img {
+      margin: 0 auto;
+      border-radius: 50%;
+    };
+  }
+  
+  &:checked {
+    + label {
+      background-color: pink;
+      
+      & > img {
+      }
+    }
+  } 
+} 
+
+@media only screen and (max-width: 1024px) {
+  .sidebar {
+    
+  }
+}

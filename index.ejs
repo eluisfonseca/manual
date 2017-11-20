@@ -6,9 +6,34 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
+    <div class="sidebar background-dark-gray">
+        <label for="cenas">
+          <div>
+              <img class="icon" src="./assets/images/gen.png" alt="">
+              <ul>
+                <li>
+                  <i class="icon-dice"></i>Resumo
+                </li>
+              </ul>
+          </div>
+        </label>
+    </div>
     <div class="content">
-        <h1 class="color-red">This will be a single page website</h1>
-        <h3>Replace this page with your own code</h3>
+      <section id="quick-ref">
+        <h1>Resumo</h1>
+      </section>
+      <section id="game">
+        <h1>O Jogo</h1>
+      </section>
+      <section id="table">
+        <h1>A Mesa de Jogo</h1>
+      </section>
+      <section id="sprints">
+        <h1>As Sprints</h1>
+      </section>
+      <section id="special">
+        <h1>Habilidades e Condicionantes</h1>
+      </section>
     </div>
 </body>
 </html>
