@@ -106,8 +106,8 @@ module.exports = {
             },
             // FONTS
             {
-                test: /\.(eot|svg|ttf|woff|woff2)$/,
-                loader: 'file?name=assets/fonts/[name].[ext]'
+                test: /\.(png|jpe?g|svg|gif|woff|woff2|ttf|eot|ico)$/,
+                loader: 'file-loader?name=assets/[name].[ext]'
             }
         ]
     }
