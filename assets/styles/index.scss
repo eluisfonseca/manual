@@ -30,16 +30,35 @@ body {
 .content {
   display: inline-block;
   height: 100vh;
-  width: 100%;
+  width: calc(100% - 250px);
   margin-left: 250px;
   z-index: 2;
 
   & > div {
     height: 100vh;
     padding: 30px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
 .quick-ref {
-  background-image: url('../images/vasco.png');
+  background-image: url('../images/IMG_8409_2.jpg '), linear-gradient(#252525, #272727);
+}
+
+.game{
+  background-image: url('../images/IMG_8353_1.jpg'), linear-gradient(#252525, #272727);
+}
+
+.table {
+  background-image: url('../images/IMG_8412.jpg'), linear-gradient(#252525, #272727);
+}
+
+.sprints {
+  background-image: url('../images/IMG_8355-1.jpg'), linear-gradient(#252525, #272727);
+}
+
+.special {
+  background-image: url('../images/IMG_8413.jpg'), linear-gradient(#252525, #272727);
 }
