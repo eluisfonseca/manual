@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 // Is the current build a development build
 const IS_DEV = (process.env.NODE_ENV === 'dev');
 
@@ -56,40 +56,12 @@ module.exports = {
             },
 
             // STYLES
+            { test: /\.css$/, loader: 'css-to-string-loader!style-loader!css-loader!postcss-loader' },
             {
-                test: /\.css$/,
-                use: [
-                    'style-loader',
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            sourceMap: IS_DEV
-                        }
-                    },
-                ]
+                test: /\.scss$/,
+                exclude: [/node_modules/],
+                loaders: ['style-loader', 'css-loader', 'sass-loader?sourceMap']
             },
-
-            // CSS / SASS
-            {
-                test: /\.scss/,
-                use: [
-                    'style-loader',
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            sourceMap: IS_DEV
-                        }
-                    },
-                    {
-                        loader: 'sass-loader',
-                        options: {
-                            sourceMap: IS_DEV,
-                            includePaths: [dirAssets]
-                        }
-                    }
-                ]
-            },
-
             // EJS
             {
                 test: /\.ejs$/,
@@ -106,7 +78,7 @@ module.exports = {
             },
             // FONTS
             {
-                test: /\.(png|jpe?g|svg|gif|woff|woff2|ttf|eot|ico)$/,
+                test: /\.(svg|woff|woff2|ttf|eot|ico)$/,
                 loader: 'file-loader?name=assets/[name].[ext]'
             }
         ]
