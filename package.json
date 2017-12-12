@@ -15,6 +15,7 @@
     "url": "https://cvgellhorn@github.com/cvgellhorn/webpack-boilerplate.git"
   },
   "dependencies": {
+    "include-media": "^1.4.9",
     "lodash": "^4.17.4",
     "scroll-snap": "^1.0.5"
   },
