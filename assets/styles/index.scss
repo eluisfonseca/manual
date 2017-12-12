@@ -5,10 +5,12 @@
 @import 'colors';
 @import 'sidebar';
 @import 'icons';
+@import 'fonts';
 @import 'typography';
 
 html {
     box-sizing: border-box;
+    font-family: 'baskerville';
     height: 100%;
 }
 *, *:before, *:after {
