@@ -1,69 +1,69 @@
 @font-face {
   font-family: 'din';
-  src: url('/assets/fonts/DIN.eot'); /* IE9 Compat Modes */
-  src: url('/assets/fonts/DIN.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/assets/fonts/DIN.woff') format('woff'), /* Modern Browsers */
-       url('/assets/fonts/DIN.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('/assets/fonts/DIN.svg#0756f27ca9ade505a577fcdbfde2969b') format('svg'); /* Legacy iOS */
+  src: url('/assets/fonts/din.eot'); // IE9 Compat Modes //
+  src: url('/assets/fonts/din.eot?#iefix') format('embedded-opentype'), // IE6-IE8 //
+       url('/assets/fonts/din.woff') format('woff'), // Modern Browsers //
+       url('/assets/fonts/din.ttf')  format('truetype'), // Safari, Android, iOS //
+       url('/assets/fonts/din.svg#0756f27ca9ade505a577fcdbfde2969b') format('svg'); // Legacy iOS //
 
-  font-style:   normal;
-  font-weight:  400;
+  font-style: normal;
+  font-weight: 400;
 }
 
 @font-face {
   font-family: 'din-bold';
-  src: url('/assets/fonts/DIN Bold.eot'); /* IE9 Compat Modes */
-  src: url('/assets/fonts/DIN Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/assets/fonts/DIN Bold.woff') format('woff'), /* Modern Browsers */
-       url('/assets/fonts/DIN Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('/assets/fonts/DIN Bold.svg#24cbf094aa5639aabb4669a82c8648c7') format('svg'); /* Legacy iOS */
+  src: url('/assets/fonts/din-bold.eot'); // IE9 Compat Modes //
+  src: url('/assets/fonts/din-bold.eot?#iefix') format('embedded-opentype'), // IE6-IE8 //
+       url('/assets/fonts/din-bold.woff') format('woff'), // Modern Browsers //
+       url('/assets/fonts/din-bold.ttf')  format('truetype'), // Safari, Android, iOS //
+       url('/assets/fonts/din-bold.svg#24cbf094aa5639aabb4669a82c8648c7') format('svg'); // Legacy iOS //
 
-  font-style:   normal;
-  font-weight:  700;
+  font-style: normal;
+  font-weight: 700;
 }
 
 @font-face {
   font-family: 'din-light';
-  src: url('/assets/fonts/DIN-Light.eot'); /* IE9 Compat Modes */
-  src: url('/assets/fonts/DIN-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/assets/fonts/DIN-Light.woff') format('woff'), /* Modern Browsers */
-       url('/assets/fonts/DIN-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('/assets/fonts/DIN-Light.svg#2027e760254904bf0a383b6efd34e0f4') format('svg'); /* Legacy iOS */
+  src: url('/assets/fonts/din-light.eot'); // IE9 Compat Modes //
+  src: url('/assets/fonts/din-light.eot?#iefix') format('embedded-opentype'), // IE6-IE8 //
+       url('/assets/fonts/din-light.woff') format('woff'), // Modern Browsers //
+       url('/assets/fonts/din-light.ttf')  format('truetype'), // Safari, Android, iOS //
+       url('/assets/fonts/din-light.svg#2027e760254904bf0a383b6efd34e0f4') format('svg'); // Legacy iOS //
   font-style: normal;
   font-weight: 200;
 }
 
 @font-face {
   font-family: 'din-medium';
-  src: url('/assets/fonts/DIN-Medium.eot'); /* IE9 Compat Modes */
-  src: url('/assets/fonts/DIN-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/assets/fonts/DIN-Medium.woff') format('woff'), /* Modern Browsers */
-       url('/assets/fonts/DIN-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('/assets/fonts/DIN-Medium.svg#d810fd0de5f94c19f1c61300cb3051eb') format('svg'); /* Legacy iOS */
+  src: url('/assets/fonts/din-medium.eot'); // IE9 Compat Modes //
+  src: url('/assets/fonts/din-medium.eot?#iefix') format('embedded-opentype'), // IE6-IE8 //
+       url('/assets/fonts/din-medium.woff') format('woff'), // Modern Browsers //
+       url('/assets/fonts/din-medium.ttf')  format('truetype'), // Safari, Android, iOS //
+       url('/assets/fonts/din-medium.svg#d810fd0de5f94c19f1c61300cb3051eb') format('svg'); // Legacy iOS //
 
-  font-style:   normal;
-  font-weight:  400;
+  font-style: normal;
+  font-weight: 400;
 }
 
 @font-face {
   font-family: 'baskerville';
-  src: url('/assets/fonts/Monotype  - BaskervilleMTStd-Italic.eot'); /* IE9 Compat Modes */
-  src: url('/assets/fonts/Monotype  - BaskervilleMTStd-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/assets/fonts/Monotype  - BaskervilleMTStd-Italic.woff') format('woff'), /* Modern Browsers */
-       url('/assets/fonts/Monotype  - BaskervilleMTStd-Italic.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('/assets/fonts/Monotype  - BaskervilleMTStd-Italic.svg#2523ef87fbc32b59fb7153a2eff49fa3') format('svg'); /* Legacy iOS */
+  src: url('/assets/fonts/baskerville.eot'); // IE9 Compat Modes //
+  src: url('/assets/fonts/baskerville.eot?#iefix') format('embedded-opentype'), // IE6-IE8 //
+       url('/assets/fonts/baskerville.woff') format('woff'), // Modern Browsers //
+       url('/assets/fonts/baskerville.ttf')  format('truetype'), // Safari, Android, iOS //
+       url('/assets/fonts/baskerville.svg#2523ef87fbc32b59fb7153a2eff49fa3') format('svg'); // Legacy iOS //
 
-  font-style:   italic;
-  font-weight:  400;
+  font-style: italic;
+  font-weight: 400;
 }
 
 @font-face {
   font-family: 'neue';
-  src: url('/assets/fonts/Monotype  - Neue Haas Unica Pro Bold.eot'); /* IE9 Compat Modes */
-  src: url('/assets/fonts/Monotype  - Neue Haas Unica Pro Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/assets/fonts/Monotype  - Neue Haas Unica Pro Bold.woff') format('woff'), /* Modern Browsers */
-       url('/assets/fonts/Monotype  - Neue Haas Unica Pro Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('/assets/fonts/Monotype  - Neue Haas Unica Pro Bold.svg#330fe3205f1baaeffa09afb2d3285b3d') format('svg'); /* Legacy iOS */
+  src: url('/assets/fonts/neue.eot'); // IE9 Compat Modes //
+  src: url('/assets/fonts/neue.eot?#iefix') format('embedded-opentype'), // IE6-IE8 //
+       url('/assets/fonts/neue.woff') format('woff'), // Modern Browsers //
+       url('/assets/fonts/neue.ttf')  format('truetype'), // Safari, Android, iOS //
+       url('/assets/fonts/neue.svg#330fe3205f1baaeffa09afb2d3285b3d') format('svg'); // Legacy iOS //
 
   font-style: normal;
   font-weight: 700;
