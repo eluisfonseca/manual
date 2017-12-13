@@ -1,0 +1,57 @@
+#landing {
+  .content { 
+    & > div {
+      height: 50vh;
+      width: 100%;
+    }
+
+    .top {
+      position: relative;
+
+      div {
+        font-family: din-bold;
+        font-size: 30px;
+        color: $white;
+        text-transform: uppercase;
+        position: absolute;
+
+        &:first-child {
+          left: 30px;
+          top: 30px;
+        }
+
+        &:nth-child(2) {
+          right: 30px;
+          top: 30px;
+        }
+
+        &:nth-child(3) {
+          left: 30px;
+          bottom: 30px;
+        }
+
+        &:last-child {
+          right: 30px;
+          bottom: 30px;
+        }
+      }
+    }
+
+    .bottom {
+      padding: 30px;
+      position: relative;
+
+      > img {
+        width: 30px;
+      }
+
+      > div {
+        color: $red;
+        right: 30px;
+        top: 30px;
+        font-size: 20px;
+        position: absolute;
+      }
+    }
+  }
+}

@@ -4,10 +4,11 @@
 
 @import 'vendor';
 @import 'colors';
-@import 'sidebar';
-@import 'icons';
 @import 'fonts';
 @import 'typography';
+@import 'menu';
+@import 'sections/landing';
+@import 'sections/gent';
 
 html {
   box-sizing: border-box;
@@ -28,43 +29,23 @@ body {
   padding: 0;
 }
 
-.icon {
-  height: 50px;
-  width: 50px;
+section {
+  min-height: 100vh;
+  position: relative;
 }
 
-.content {
-  display: inline-block;
-  height: 100vh;
-  margin-left: 250px;
-  width: calc(100% - 250px);
-  z-index: 2;
+// .game{
+//   background-image: url('../images/IMG_8353_1.jpg'), linear-gradient(#252525, #272727);
+// }
 
-  & > div {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    height: 100vh;
-    padding: 30px;
-  }
-}
+// .table {
+//   background-image: url('../images/IMG_8412.jpg'), linear-gradient(#252525, #272727);
+// }
 
-.quick-ref {
-  background-image: url('../images/IMG_8409_2.jpg '), linear-gradient(#252525, #272727);
-}
+// .sprints {
+//   background-image: url('../images/IMG_8355-1.jpg'), linear-gradient(#252525, #272727);
+// }
 
-.game{
-  background-image: url('../images/IMG_8353_1.jpg'), linear-gradient(#252525, #272727);
-}
-
-.table {
-  background-image: url('../images/IMG_8412.jpg'), linear-gradient(#252525, #272727);
-}
-
-.sprints {
-  background-image: url('../images/IMG_8355-1.jpg'), linear-gradient(#252525, #272727);
-}
-
-.special {
-  background-image: url('../images/IMG_8413.jpg'), linear-gradient(#252525, #272727);
-}
+// .special {
+//   background-image: url('../images/IMG_8413.jpg'), linear-gradient(#252525, #272727);
+// }

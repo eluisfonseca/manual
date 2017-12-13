@@ -4,58 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <script src="/node_modules/waypoints/lib/noframework.waypoints.min.js"></script>
 </head>
 <body>
-    <div class="sidebar background-dark-gray">
-        <label for="cenas">
-          <div>
-              <img class="icon" src="./assets/images/gen.png" alt="">
-              <ul class="sidebar-list">
-                <li>
-                  <a href="#quick-ref">
-                    <i class="icon-dice"></i>Resumo
-                  </a>
-                </li>
-                <li>
-                  <a href="#game">
-                    <i class="icon-dice"></i>O Jogo
-                  </a>
-                </li>
-                <li>
-                  <a href="#table">
-                    <i class="icon-dice"></i>A Mesa de Jogo
-                  </a>
-                </li>
-                <li>
-                  <a href="#sprints">
-                    <i class="icon-dice"></i>As Sprints
-                  </a>
-                </li>
-                <li>
-                  <a href="#special">
-                    <i class="icon-dice"></i>Habibilidades
-                  </a>
-                </li>
-              </ul>
-          </div>
-        </label>
-    </div>
-    <div class="content" id="content">
-      <div id="quick-ref" class="quick-ref">
-        <h1>Bem vindos ao Gent</h1>
+  <section id="landing">
+    <div class="content">
+      <div class="background-red top">
+        <div>g</div>
+        <div>e</div>
+        <div>n</div>
+        <div>t</div>
       </div>
-      <div id="game" class="game">
-        <h1>O Jogo</h1>
-      </div>
-      <div id="table" class="table">
-        <h1>A Mesa de Jogo</h1>
-      </div>
-      <div id="sprints" class="sprints">
-        <h1>As Sprints</h1>
-      </div>
-      <div id="special" class="special">
-        <h1>Habilidades e Condicionantes</h1>
+      <div class="background-black bottom">
+        <img src="assets/images/logo-gen.png" alt="gen-logo" class="logo">
+        <div>'17</div>
       </div>
     </div>
+    <div id="first-menu-mobile" class="menu menu-mobile">
+      <ul>
+        <li>
+          <a href="#gent" id="gent-button">
+              Gent
+          </a>
+        </li>
+        <li>
+            <a href="#baralho" id="baralho-button">
+              Do Baralho
+            </a>
+        </li>
+        <li>
+          <a href="#accao" id="accao-button">
+            Em Acção
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section id="gent">
+    <div class="banner">
+
+    </div>
+  </section>
 </body>
 </html>

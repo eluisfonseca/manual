@@ -1,0 +1,63 @@
+.menu {
+  background-color: $black;
+
+  ul {
+    text-transform: uppercase;
+    font-family: din;
+    font-size: 11px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    margin: 0;
+    padding: 30px;
+
+    li {
+      color: $white;
+      display: inline-block;
+      flex: 1 0 auto;
+      text-align: center;
+      
+      &:first-child {
+        text-align: left;
+      }
+
+      &:last-child {
+        text-align: right;
+      }
+
+      a {
+        color: $white;
+
+        &:hover,
+        &:focus,
+        &.active
+         {
+          color: $red;
+        }
+      }
+
+
+      &:hover,
+      &:focus,
+      &.active
+       {
+        color: $red;
+      }
+    }
+  }
+
+  &-mobile {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 80px;
+    z-index: 9999;
+
+    &.fixed {
+      position: fixed;
+      top: 0;
+    }
+  }
+}

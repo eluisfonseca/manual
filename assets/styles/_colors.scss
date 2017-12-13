@@ -5,10 +5,26 @@ $green: #090;
 $blue: #00f;
 $dark-gray: #777;
 
+.color-white {
+  color: $white;
+}
+
+.color-black {
+  color: $black;
+}
+
 .color-red {
   color: $red;
 }
 
-.background-dark-gray {
-  background-color: $dark-gray;
+.background-black {
+  background-color: $black;
+}
+
+.background-white {
+  background-color: $white;
+}
+
+.background-red {
+  background-color: $red;
 }
