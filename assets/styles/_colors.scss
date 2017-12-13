@@ -3,7 +3,9 @@ $black: #1a1b1d;
 $white: #fff;
 $green: #090;
 $blue: #00f;
-$dark-gray: #777;
+$gray: rgba(255, 255, 255, 0.2);
+$middle-gray: #282B2E;
+$dark-gray: #1A1B1D;
 
 .color-white {
   color: $white;
@@ -17,6 +19,10 @@ $dark-gray: #777;
   color: $red;
 }
 
+.color-gray {
+  color: $gray
+}
+
 .background-black {
   background-color: $black;
 }
@@ -27,4 +33,8 @@ $dark-gray: #777;
 
 .background-red {
   background-color: $red;
+}
+
+.background-middle-gray {
+  background-color: $middle-gray;
 }

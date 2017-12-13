@@ -2,10 +2,57 @@
   .banner {
     background-color: $black;
     background-image: url('../images/rui-adriana-marcio.png');
-    height: 100vh;
+    height: calc(100vh - 55px);
     background-size: auto 80%;
     background-repeat: no-repeat;
     background-position-y: bottom;
     background-position-x: center;
+    position: relative;
+    
+    .banner-content {
+      position: absolute;
+      bottom: 0;
+      left: 0; 
+    }
+
+    h1,
+    h3 {
+      color: $white;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      font-family: 'neue';
+      font-size: 34px;
+      line-height: 41px;
+      letter-spacing: 1.1px;
+      margin-bottom: 20px;
+      padding-left: 30px;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-family: 'baskerville';
+      margin-bottom: 45px;
+      padding-left: 60px;
+      line-height: 24px;
+      letter-spacing: 1px;
+    }
+  }
+
+  .content {
+    padding: 60px 30px 60px 60px;
+
+    p {
+      font-family: 'din-medium';
+      font-size: 16px;
+      color: $white;
+      margin: 0;
+      padding: 0;
+      line-height: 24px;
+      letter-spacing: 1.6px;
+    }
   }
 }

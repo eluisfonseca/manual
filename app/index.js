@@ -4,6 +4,7 @@
 
 // Load application styles
 import 'styles/index.scss';
+import { log } from 'util';
 
 console.log('ola');
 
@@ -18,7 +19,7 @@ var waypointLanding = new Waypoint({
 })
 
 var waypointGent = new Waypoint({
-  element: document.getElementById('gent'),
+  element: document.getElementById('gent-banner'),
   handler: function(direction) {
     if (document.getElementById('gent-button').className.indexOf(' active') == -1) {
       document.getElementById('gent-button').className = " active";
@@ -30,3 +31,14 @@ var waypointGent = new Waypoint({
   },
   offset: 'bottom-in-view'
 })
+
+
+var scroll = new Scroll(document.body);
+
+document.getElementById('gent-button').onclick = function () {
+  var myElement = document.getElementById('gent');
+  scroll.toElement(myElement).then(function () {
+    // done scrolling to the element
+    console.log('asd');
+  });
+};
