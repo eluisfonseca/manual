@@ -5,3 +5,9 @@
     display: block;
   }
 }
+
+.mobile-only {
+  @include media('>=desktop') {
+    display: none;
+  }
+}
