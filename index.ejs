@@ -104,24 +104,32 @@
           habilidades especiais que afectam o jogo.
       </p>
     </div>
-    <div class="cartas background-middle-gray">
-      <div id="card-menu" class="card-menu dropdown">
-        <label for="card-toggle">
-          <div class="selected">
-            <span class="title" id="card-type-title">Cenas</span>
-            <img src="./assets/images/chevron-down.png" alt="chevron-down">
+    <div id="cartas" class="cartas background-middle-gray">
+      <div id="card-menu" class="card-menu">
+        <div class="dropdown">
+          <input type="checkbox" name="card-toggle" id="card-toggle">
+          <label for="card-toggle">
+            <div class="selected">
+              <span class="title" id="card-type-title">Cenas</span>
+              <img class="icon" src="./assets/images/chevron-down.png" alt="chevron-down">
+            </div>
+          </label>
+          <div class="dropdown-content">
+            <div class="dropdown-option" id="designer-button">Designer</div>
+            <div class="dropdown-option" id="manager-button">Manager</div>
+            <div class="dropdown-option" id="developer-button">Developer</div>
+            <div class="dropdown-option" id="condicionantes-button">Condicionantes</div>
           </div>
-        </label>
-        <input type="checkbox" name="card-toggle" id="card-toggle">
+        </div>
       </div>
-      <div id="designer-card" class="card-container">
+      <div id="designers-card" class="card-container">
         <p class="description">
             Alguns designers possuem habilidades que te
             dão pontos extra.O aumento é feito consoante
             o número indicado na carta.
         </p>
       </div>
-      <div id="manager-card" class="card-container">
+      <div id="managers-card" class="card-container">
           <p class="description">
             Com a Habilidade de Micro-Management, as
             Managers permitem-te ir buscar cartas extra
@@ -130,7 +138,7 @@
             junto da habilidade.
           </p>
         </div>
-      <div id="developer-card" class="card-container">
+      <div id="developers-card" class="card-container">
         <p class="description">
             Os Developers podem usar as suas habilidades
             de Hacking para diminuir os pontos do teu
@@ -138,7 +146,7 @@
             número na junto da habilidade.
         </p>
       </div>
-      <div id="condicionante-card" class="card-container">
+      <div id="condicionantes-card" class="card-container">
           <p class="description">
               Condicionantes influenciam positiva
               ou negativamente os jogadores. Apenas 1

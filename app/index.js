@@ -10,7 +10,6 @@ function clearMenu() {
   var items = document.getElementsByClassName("mobile-menu-item");
   
   for (let i=0; i<items.length; i++) {
-    console.log('asaa');
     items[i].className = items[i].className.replace(/active/g,'');
   }
 }
@@ -20,7 +19,7 @@ function clearMenu() {
 var waypointLanding = new Waypoint({
   element: document.getElementById('gent'),
   handler: function(direction) {
-    console.log('You have scrolled to gent')
+    // console.log('You have scrolled to gent')
     document.getElementById('first-menu-mobile').className = document.getElementById('first-menu-mobile').className.replace(/fixed/g,'');
     clearMenu();
   },
@@ -31,7 +30,7 @@ var waypointGentUpwards = new Waypoint({
   element: document.getElementById('gent-content'),
   handler: function(direction) {
     if(direction === 'up') {
-      console.log('You have scrolled to gent coming up')
+      // console.log('You have scrolled to gent coming up')
       document.getElementById('first-menu-mobile').className = document.getElementById('first-menu-mobile').className.replace(/fixed/g,'');
       clearMenu();
     }
@@ -47,7 +46,7 @@ var waypointGent = new Waypoint({
     if (document.getElementById('first-menu-mobile').className.indexOf(' fixed') == -1) {
       document.getElementById('first-menu-mobile').className += " fixed";
     }
-    console.log('You have scrolled to a gent-banner');
+    // console.log('You have scrolled to a gent-banner');
   },
   offset: 'bottom-in-view'
 })
@@ -60,7 +59,7 @@ var waypointBaralho = new Waypoint({
     if (document.getElementById('first-menu-mobile').className.indexOf(' fixed') == -1) {
       document.getElementById('first-menu-mobile').className += " fixed";
     }
-    console.log('You have scrolled to baralho');
+    // console.log('You have scrolled to baralho');
   },
   offset: '70%'
 })
@@ -74,7 +73,7 @@ var waypointBaralhoUpwards = new Waypoint({
       if (document.getElementById('first-menu-mobile').className.indexOf(' fixed') == -1) {
         document.getElementById('first-menu-mobile').className += " fixed";
       }
-      console.log('You have scrolled to baralho comming up');
+      // console.log('You have scrolled to baralho comming up');
     }
   },
   offset: 'bottom-in-view'
@@ -88,7 +87,7 @@ var waypointAccao = new Waypoint({
     if (document.getElementById('first-menu-mobile').className.indexOf(' fixed') == -1) {
       document.getElementById('first-menu-mobile').className += " fixed";
     }
-    console.log('You have scrolled to accao');
+    // console.log('You have scrolled to accao');
   },
   offset: '90%'
 });
@@ -102,7 +101,7 @@ var waypointAccaoUpwards = new Waypoint({
       if (document.getElementById('first-menu-mobile').className.indexOf(' fixed') == -1) {
         document.getElementById('first-menu-mobile').className += " fixed";
       }
-      console.log('You have scrolled to accao coming up');
+      // console.log('You have scrolled to accao coming up');
     }
   },
   offset: 'bottom-in-view'
@@ -135,3 +134,94 @@ document.getElementById('accao-button').onclick = function () {
     // done scrolling to the element
   });
 };
+
+// CARD MENU ACTIONS
+function parseDropdownMenu(clear = false) {
+  if (clear) {
+    document.getElementById('card-menu').className = document.getElementById('card-menu').className.replace(/fixed/g,'');
+  } else {
+    if (document.getElementById('card-menu').className.indexOf(' fixed') == -1) {
+      document.getElementById('card-menu').className += " fixed";
+    }
+  }
+}
+
+function cardMenuPress(type) {
+  var container = document.getElementById('cartas');
+  var myElement = document.getElementById(type+'-card');
+  var subjectRectFrom = container.getBoundingClientRect();
+  var subjectRectTo = myElement.getBoundingClientRect();
+  console.log(subjectRectFrom.top + document.documentElement.scrollTop, subjectRectTo.top + document.documentElement.scrollTop);
+  parseDropdownMenu();
+  scroll.to(subjectRectFrom.top + document.documentElement.scrollTop, subjectRectTo.top + document.documentElement.scrollTop - 210).then(function () {
+    // done scrolling to the element
+    document.getElementById("card-toggle").checked = false;
+    document.getElementById("card-type-title").innerText = type;
+    console.log('fui para' + type);
+  });
+}
+
+document.getElementById("designer-button").addEventListener("click", function( event ) {
+  cardMenuPress('designers');
+}, false);
+
+document.getElementById("manager-button").addEventListener("click", function( event ) {
+  cardMenuPress('managers');
+}, false);
+
+document.getElementById("developer-button").addEventListener("click", function( event ) {
+  cardMenuPress('developers');
+}, false);
+
+document.getElementById("condicionantes-button").addEventListener("click", function( event ) {
+  cardMenuPress('condicionantes');
+}, false);
+
+// Helper function to get an element's exact position
+function getPosition(el) {
+    var xPos = 0;
+    var yPos = 0;
+  console.log(el);
+   
+    while (el) {
+      if (el.tagName == "BODY") {
+        // deal with browser quirks with body/window/document and page scroll
+        var xScroll = el.scrollLeft || document.documentElement.scrollLeft;
+        var yScroll = el.scrollTop || document.documentElement.scrollTop;
+   
+        xPos += (el.offsetLeft - xScroll + el.clientLeft);
+        yPos += (el.offsetTop - yScroll + el.clientTop);
+      } else {
+        // for all other non-BODY elements
+        xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft);
+        yPos += (el.offsetTop - el.scrollTop + el.clientTop);
+      }
+   
+      el = el.offsetParent;
+    }
+    return {
+      x: xPos,
+      y: yPos
+    };
+  }
+   
+  // deal with the page getting resized or scrolled
+  window.addEventListener("scroll", updatePosition, false);
+  window.addEventListener("resize", updatePosition, false);
+   
+  function updatePosition() {
+    // add your code to update the position when your browser
+    // is resized or scrolled
+  }
+
+  function getOffsetLeft( elem )
+  {
+      var offsetLeft = 0;
+      do {
+        if ( !isNaN( elem.offsetLeft ) )
+        {
+            offsetLeft += elem.offsetLeft;
+        }
+      } while( elem = elem.offsetParent );
+      return offsetLeft;
+  }

@@ -56,29 +56,39 @@
 
   .cartas {
     padding: 124px 0 0 0;
+    position: relative;
 
     .card-menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+      &.fixed {
+        position: fixed;
+        top: 80px;
+      }
       .selected {
         padding: 0 30px;
       }
     }
 
-    #designer-card {
+    #designers-card {
       background-image: url('../images/designers_card.png');
       background-position-y: 55px;
     }
 
-    #manager-card {
+    #managers-card {
       background-image: url('../images/managers_card.png');
       background-position-y: 100px;
     }
 
-    #developer-card {
+    #developers-card {
       background-image: url('../images/devs_card.png');
       background-position-y: 75px;
     }
 
-    #condicionante-card {
+    #condicionantes-card {
       background-image: url('../images/condicio_card.png');
       background-position-y: 115px;
     }
