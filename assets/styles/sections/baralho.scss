@@ -22,7 +22,6 @@
       font-size: 12px;
       line-height: 35px;
       letter-spacing: 1.2px;
-      color: $gray;
     }
 
     .number {
@@ -31,7 +30,7 @@
       font-size: 80px;
       line-height: 80px;
       letter-spacing: 3px;
-      
+
       span:last-child {
         float: right;
       }
@@ -111,7 +110,38 @@
         letter-spacing: 1.99px;
         font-family: 'baskerville';
         width: 65%;
-        min-width: 230px; 
+        min-width: 230px;
+      }
+    }
+  }
+
+  @include media('>=desktop') {
+    display: flex;
+
+    > div {
+      flex-basis: 50%;
+    }
+
+    .numbers {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: center;
+      padding: 0 10%;
+
+      > div {
+        width: 100%;
+      }
+
+      &-info {
+        border-top: 0 !important;
+        color: $white;
+        font-family: 'din-light';
+        font-size: 16px;
+        letter-spacing: 1.6;
+        line-height: 24px;
+        margin-top: 75px;
       }
     }
   }

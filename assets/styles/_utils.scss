@@ -1,13 +1,13 @@
 .desktop-only {
-  display: none;
+  display: none !important;
 
   @include media('>=desktop') {
-    display: block;
+    display: block !important;
   }
 }
 
 .mobile-only {
   @include media('>=desktop') {
-    display: none;
+    display: none !important;
   }
 }
