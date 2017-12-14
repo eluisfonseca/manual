@@ -55,7 +55,13 @@
   }
 
   .cartas {
-    padding: 124px 0 0 30px;
+    padding: 124px 0 0 0;
+
+    .card-menu {
+      .selected {
+        padding: 0 30px;
+      }
+    }
 
     #designer-card {
       background-image: url('../images/designers_card.png');
@@ -82,7 +88,9 @@
       background-repeat: no-repeat;
       background-position-x: 125%;
       background-size: 90% auto;
-      padding-top: 110px;
+      padding-left: 30px;
+      margin-bottom: 80px;
+      // padding-top: 110px;
 
       .description {
         font-size: 16px;

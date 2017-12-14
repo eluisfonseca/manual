@@ -6,6 +6,17 @@
 import 'styles/index.scss';
 import { log } from 'util';
 
+function clearMenu() {
+  var items = document.getElementsByClassName("mobile-menu-item");
+  
+  for (let i=0; i<items.length; i++) {
+    console.log('asaa');
+    items[i].className = items[i].className.replace(/active/g,'');
+  }
+}
+
+// MENU WAYPOINTS
+
 var waypointLanding = new Waypoint({
   element: document.getElementById('gent'),
   handler: function(direction) {
@@ -98,6 +109,7 @@ var waypointAccaoUpwards = new Waypoint({
 });
 
 
+// MENU BUTTON SCROLL
 var scroll = new Scroll(document.body);
 
 document.getElementById('gent-button').onclick = function () {
@@ -123,12 +135,3 @@ document.getElementById('accao-button').onclick = function () {
     // done scrolling to the element
   });
 };
-
-function clearMenu() {
-  var items = document.getElementsByClassName("mobile-menu-item");
-  
-  for (let i=0; i<items.length; i++) {
-    console.log('asaa');
-    items[i].className = items[i].className.replace(/active/g,'');
-  }
-}

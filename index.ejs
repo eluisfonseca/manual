@@ -7,7 +7,7 @@
     <script src="/node_modules/waypoints/lib/noframework.waypoints.min.js"></script>
     <script src="/node_modules/scroll-js/dist/scroll-min.js"></script>
 </head>
-<body>
+<body> 
   <section id="landing">
     <div class="content">
       <div class="background-red top">
@@ -89,6 +89,15 @@
       </p>
     </div>
     <div class="cartas background-middle-gray">
+      <div id="card-menu" class="card-menu dropdown">
+        <label for="card-toggle">
+          <div class="selected">
+            <span class="title" id="card-type-title">Cenas</span>
+            <img src="./assets/images/chevron-down.png" alt="chevron-down">
+          </div>
+        </label>
+        <input type="checkbox" name="card-toggle" id="card-toggle">
+      </div>
       <div id="designer-card" class="card-container">
         <p class="description">
             Alguns designers possuem habilidades que te 
