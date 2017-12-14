@@ -144,5 +144,22 @@
         margin-top: 75px;
       }
     }
+
+    .cartas {
+      padding-top: 0;
+
+      .card-container {
+        align-items: flex-end;
+        background-size: 50%;
+        background-position-x: 90%;
+        background-position-y: calc(100% - 100px) !important;
+        display: flex;
+        height: 100vh;
+
+        .description {
+          margin-bottom: 30%;
+        }
+      }
+    }
   }
 }
