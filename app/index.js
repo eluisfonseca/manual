@@ -20,7 +20,7 @@ var waypointLanding = new Waypoint({
   element: document.getElementById('gent'),
   handler: function(direction) {
     // console.log('You have scrolled to gent')
-    document.getElementById('first-menu-mobile').className = document.getElementById('first-menu-mobile').className.replace(/fixed/g,'');
+    document.getElementById('first-menu-mobile').className = document.getElementById('first-menu-mobile').className.replace(/ fixed/g,'');
     clearMenu();
   },
   offset: '25%'
@@ -31,7 +31,7 @@ var waypointGentUpwards = new Waypoint({
   handler: function(direction) {
     if(direction === 'up') {
       // console.log('You have scrolled to gent coming up')
-      document.getElementById('first-menu-mobile').className = document.getElementById('first-menu-mobile').className.replace(/fixed/g,'');
+      document.getElementById('first-menu-mobile').className = document.getElementById('first-menu-mobile').className.replace(/ fixed/g,'');
       clearMenu();
     }
   },
@@ -51,15 +51,29 @@ var waypointGent = new Waypoint({
   offset: 'bottom-in-view'
 })
 
+var waypointGentMenuBeneath = new Waypoint({
+  element: document.getElementById('baralho'),
+  handler: function(direction) {
+    if(direction === 'up') {
+      clearMenu();
+      document.getElementById('gent-button').className += " active";
+    }
+    console.log('You have scrolled to gent section from beneath');
+  },
+  offset: '60%'
+});
+
 var waypointBaralho = new Waypoint({
   element: document.getElementById('baralho'),
   handler: function(direction) {
-    clearMenu();
-    document.getElementById('baralho-button').className += " active";
-    if (document.getElementById('first-menu-mobile').className.indexOf(' fixed') == -1) {
-      document.getElementById('first-menu-mobile').className += " fixed";
+    if (direction === 'down') {
+      clearMenu();
+      document.getElementById('baralho-button').className += " active";
+      if (document.getElementById('first-menu-mobile').className.indexOf(' fixed') == -1) {
+        document.getElementById('first-menu-mobile').className += " fixed";
+      }
     }
-    // console.log('You have scrolled to baralho');
+    console.log('You have scrolled to baralho');
   },
   offset: '70%'
 })
@@ -79,32 +93,153 @@ var waypointBaralhoUpwards = new Waypoint({
   offset: 'bottom-in-view'
 })
 
+var waypointDesignersCard = new Waypoint({
+  element: document.getElementById('designers-card'),
+  handler: function(direction) {
+    console.log('You have scrolled to cartas content comming ' + direction);
+    document.getElementById("card-type-title").innerText = 'designers';
+    if (direction === 'down') {
+      // document.getElementById('card-menu').className = document.getElementById('card-menu').className.replace(/ fixed/g,'');
+      if (document.getElementById('card-menu').className.indexOf(' fixed') == -1) {
+        document.getElementById('card-menu').className += " fixed";
+      }
+    } else {
+      document.getElementById('card-menu').className = document.getElementById('card-menu').className.replace(/ fixed/g,'');
+    }
+  },
+  offset: 200
+});
+
+var waypointDesignersCardUp = new Waypoint({
+  element: document.getElementById('managers-card'),
+  handler: function(direction) {
+    console.log('You have scrolled to designer from beneath. Direction: ' + direction);
+    if (direction === 'up') {
+      document.getElementById("card-type-title").innerText = 'designers';
+    }
+  },
+  offset: '80%'
+});
+
+var waypointManagersCard = new Waypoint({
+  element: document.getElementById('managers-card'),
+  handler: function(direction) {
+    console.log('You have scrolled to managers cartas comming ' + direction);
+    document.getElementById("card-type-title").innerText = 'managers';
+    if (direction === 'down') {
+      // document.getElementById('card-menu').className = document.getElementById('card-menu').className.replace(/ fixed/g,'');
+      if (document.getElementById('card-menu').className.indexOf(' fixed') == -1) {
+        document.getElementById('card-menu').className += " fixed";
+      }
+    }
+  },
+  offset: 200
+});
+
+var waypointManagersCardUp = new Waypoint({
+  element: document.getElementById('developers-card'),
+  handler: function(direction) {
+    console.log('You have scrolled to managers from beneath. Direction: ' + direction);
+    if (direction === 'up') {
+      document.getElementById("card-type-title").innerText = 'managers';
+    }
+  },
+  offset: '80%'
+})
+
+var waypointDevelopersCard = new Waypoint({
+  element: document.getElementById('developers-card'),
+  handler: function(direction) {
+    document.getElementById("card-type-title").innerText = 'developers';
+    console.log('You have scrolled to developers cartas comming ' + direction);
+    if (direction === 'down') {
+      // document.getElementById('card-menu').className = document.getElementById('card-menu').className.replace(/ fixed/g,'');
+      if (document.getElementById('card-menu').className.indexOf(' fixed') == -1) {
+        document.getElementById('card-menu').className += " fixed";
+      }
+    }
+  },
+  offset: 200
+})
+
+var waypointDevelopersCardUp = new Waypoint({
+  element: document.getElementById('condicionantes-card'),
+  handler: function(direction) {
+    console.log('You have scrolled to developers from beneath. Direction: ' + direction);
+    if (direction === 'up') {
+      document.getElementById("card-type-title").innerText = 'developers';
+    }
+  },
+  offset: '80%'
+})
+
+var waypointCondicionantesCard = new Waypoint({
+  element: document.getElementById('condicionantes-card'),
+  handler: function(direction) {
+    console.log('You have scrolled to condicionantes cartas comming ' + direction);
+    if (direction === 'down') {
+      // document.getElementById('card-menu').className = document.getElementById('card-menu').className.replace(/ fixed/g,'');
+      document.getElementById("card-type-title").innerText = 'condicionantes';
+      if (document.getElementById('card-menu').className.indexOf(' fixed') == -1) {
+        document.getElementById('card-menu').className += " fixed";
+      }
+    }
+  },
+  offset: 200
+});
+
+var waypointCondicionantesCardUp = new Waypoint({
+  element: document.getElementById('condicionantes-card'),
+  handler: function(direction) {
+    console.log('You have scrolled to condicionantes from beneath. Direction: ' + direction);
+    if (direction === 'up') {
+      document.getElementById("card-type-title").innerText = 'condicionantes';
+      if (document.getElementById('card-menu').className.indexOf(' fixed') == -1) {
+        document.getElementById('card-menu').className += " fixed";
+      }
+    }
+  },
+})
+
+var waypointCondicionantesCardMenuBeneath = new Waypoint({
+  element: document.getElementById('accao'),
+  handler: function(direction) {
+    if (direction === 'up') {
+      clearMenu();
+      document.getElementById('baralho-button').className += " active";
+    }
+    console.log('You have scrolled to condicionantes on the baralho section');
+  },
+  offset: '50%'
+});
+
 var waypointAccao = new Waypoint({
   element: document.getElementById('accao'),
   handler: function(direction) {
     clearMenu();
+    document.getElementById('card-menu').className = document.getElementById('card-menu').className.replace(/ fixed/g,'');
     document.getElementById('accao-button').className += " active";
     if (document.getElementById('first-menu-mobile').className.indexOf(' fixed') == -1) {
       document.getElementById('first-menu-mobile').className += " fixed";
     }
-    // console.log('You have scrolled to accao');
+    console.log('You have scrolled to accao');
   },
-  offset: '90%'
+  offset: 80
 });
 
 var waypointAccaoUpwards = new Waypoint({
   element: document.getElementById('accao'),
   handler: function(direction) {
+    console.log('You have scrolled to accao coming up');
     if(direction === 'up') {
       clearMenu();
       document.getElementById('accao-button').className += " active";
       if (document.getElementById('first-menu-mobile').className.indexOf(' fixed') == -1) {
         document.getElementById('first-menu-mobile').className += " fixed";
       }
-      // console.log('You have scrolled to accao coming up');
     }
   },
-  offset: 'bottom-in-view'
+  offset: '-50%'
 });
 
 
@@ -138,7 +273,7 @@ document.getElementById('accao-button').onclick = function () {
 // CARD MENU ACTIONS
 function parseDropdownMenu(clear = false) {
   if (clear) {
-    document.getElementById('card-menu').className = document.getElementById('card-menu').className.replace(/fixed/g,'');
+    document.getElementById('card-menu').className = document.getElementById('card-menu').className.replace(/ fixed/g,'');
   } else {
     if (document.getElementById('card-menu').className.indexOf(' fixed') == -1) {
       document.getElementById('card-menu').className += " fixed";

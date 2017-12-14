@@ -54,7 +54,7 @@
   }
 
   .cartas {
-    padding: 124px 0 0 0;
+    padding: 124px 0 80px 0;
     position: relative;
 
     .card-menu {
@@ -90,6 +90,7 @@
     #condicionantes-card {
       background-image: url('../images/condicio_card.png');
       background-position-y: 115px;
+      margin-bottom: 0;
     }
 
     .card-container {
