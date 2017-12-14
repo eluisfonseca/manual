@@ -2,11 +2,48 @@
   background: $black;
 
   .rules {
-    padding: 124px 30px 0 30px;
+    padding: 124px 0 0;
+    position: relative;
+
+    .rules-menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+      &.fixed {
+        position: fixed;
+        top: 80px;
+      }
+      .selected {
+        padding: 0 30px;
+      }
+    }
+
+    .selected {
+      padding: 0 30px;
+
+      .title {
+        display: flex;
+      }
+
+      .step-number {
+        letter-spacing: 2px;
+      }
+
+      .step-title {
+        padding-left: 20px;
+        max-width: 200px;
+      }
+    }
+
+    .dropdown-option-number {
+      color: #9F9F9F;
+    }
 
     .rule-container {
       min-height: calc(100vh - 80px);
-      padding-top: 50px;
+      padding: 50px 30px 0;
 
       .number {
         font-size: 50px;

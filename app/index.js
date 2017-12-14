@@ -5,6 +5,7 @@
 // Load application styles
 import 'styles/index.scss';
 import { log } from 'util';
+import 'rules.js'
 
 function clearMenu() {
   var items = document.getElementsByClassName("mobile-menu-item");
@@ -271,7 +272,7 @@ document.getElementById('accao-button').onclick = function () {
 };
 
 // CARD MENU ACTIONS
-function parseDropdownMenu(clear = false) {
+function parseCardsDropdownMenu(clear = false) {
   if (clear) {
     document.getElementById('card-menu').className = document.getElementById('card-menu').className.replace(/ fixed/g,'');
   } else {
@@ -287,7 +288,7 @@ function cardMenuPress(type) {
   var subjectRectFrom = container.getBoundingClientRect();
   var subjectRectTo = myElement.getBoundingClientRect();
   console.log(subjectRectFrom.top + document.documentElement.scrollTop, subjectRectTo.top + document.documentElement.scrollTop);
-  parseDropdownMenu();
+  parseCardsDropdownMenu();
   scroll.to(subjectRectFrom.top + document.documentElement.scrollTop, subjectRectTo.top + document.documentElement.scrollTop - 210).then(function () {
     // done scrolling to the element
     document.getElementById("card-toggle").checked = false;
@@ -311,52 +312,3 @@ document.getElementById("developer-button").addEventListener("click", function( 
 document.getElementById("condicionantes-button").addEventListener("click", function( event ) {
   cardMenuPress('condicionantes');
 }, false);
-
-// Helper function to get an element's exact position
-function getPosition(el) {
-    var xPos = 0;
-    var yPos = 0;
-  console.log(el);
-   
-    while (el) {
-      if (el.tagName == "BODY") {
-        // deal with browser quirks with body/window/document and page scroll
-        var xScroll = el.scrollLeft || document.documentElement.scrollLeft;
-        var yScroll = el.scrollTop || document.documentElement.scrollTop;
-   
-        xPos += (el.offsetLeft - xScroll + el.clientLeft);
-        yPos += (el.offsetTop - yScroll + el.clientTop);
-      } else {
-        // for all other non-BODY elements
-        xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft);
-        yPos += (el.offsetTop - el.scrollTop + el.clientTop);
-      }
-   
-      el = el.offsetParent;
-    }
-    return {
-      x: xPos,
-      y: yPos
-    };
-  }
-   
-  // deal with the page getting resized or scrolled
-  window.addEventListener("scroll", updatePosition, false);
-  window.addEventListener("resize", updatePosition, false);
-   
-  function updatePosition() {
-    // add your code to update the position when your browser
-    // is resized or scrolled
-  }
-
-  function getOffsetLeft( elem )
-  {
-      var offsetLeft = 0;
-      do {
-        if ( !isNaN( elem.offsetLeft ) )
-        {
-            offsetLeft += elem.offsetLeft;
-        }
-      } while( elem = elem.offsetParent );
-      return offsetLeft;
-  }
