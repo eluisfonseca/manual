@@ -17,7 +17,7 @@
       display: inline-block;
       flex: 1 0 auto;
       text-align: center;
-      
+
       &:first-child {
         text-align: left;
       }
@@ -58,6 +58,18 @@
     &.fixed {
       position: fixed;
       top: 0;
+    }
+  }
+
+  @include media('>=desktop') {
+    &-mobile,
+    &.fixed {
+      background: transparent;
+      left: 10%;
+      position: fixed;
+      top: 14px;
+      width: 40%;
+      z-index: 9999;
     }
   }
 }
