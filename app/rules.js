@@ -1,6 +1,6 @@
-console.log('rules');
+// console.log('rules');
 
-var scrollRules = new Scroll(document.body);
+// var scrollRules = new Scroll(document.body);
 const rule1 = 'Preparação do Jogo';
 const rule2 = 'Área de Trabalho';
 const rule3 = 'As Rondas';
@@ -24,7 +24,7 @@ function stickRulesDropdownMenu() {
 //     document.getElementById("rules-toggle").checked = false;
 //     document.getElementById("rules-type-title-text").innerText = text;
 //     document.getElementById("rules-type-title-number").innerText = '0'+number;
-//     console.log('fui para rule-' + number);
+    // console.log('fui para rule-' + number);
 //   });
 // }
 
@@ -63,7 +63,7 @@ var unfixRulesMenu = new Waypoint({
       document.getElementById("rules-type-title-text").innerText = rule1;
       document.getElementById("rules-type-title-number").innerText = '01';
     }
-    console.log('reached accao from ' + direction);
+    // console.log('reached accao from ' + direction);
   },
   offset: 80
 });
@@ -78,7 +78,7 @@ var arriveAtRule1 = new Waypoint({
       document.getElementById("rules-type-title-text").innerText = rule1;
       document.getElementById("rules-type-title-number").innerText = '01';
     }
-    console.log('reached accao from ' + direction);
+    // console.log('reached accao from ' + direction);
   },
   offset: -280
 });
@@ -86,7 +86,7 @@ var arriveAtRule1 = new Waypoint({
 var arriveAtRule1Beneath = new Waypoint({
   element: document.getElementById('rule-2'),
   handler: function(direction) {
-    console.log('You have scrolled to rule-1 coming ' + direction);
+    // console.log('You have scrolled to rule-1 coming ' + direction);
     if (direction === 'up') {
       document.getElementById("rules-type-title-text").innerText = rule1;
       document.getElementById("rules-type-title-number").innerText = '01';
@@ -101,7 +101,7 @@ var arriveAtRule1Beneath = new Waypoint({
 var arriveAtRule2 = new Waypoint({
   element: document.getElementById('rule-2'),
   handler: function(direction) {
-    console.log('Rule 2 ' + direction);
+    // console.log('Rule 2 ' + direction);
     document.getElementById("rules-type-title-text").innerText = rule2;
     document.getElementById("rules-type-title-number").innerText = '02';
     if (direction === 'down') {
@@ -116,7 +116,7 @@ var arriveAtRule2 = new Waypoint({
 var arriveAtRule2Beneath = new Waypoint({
   element: document.getElementById('rule-3'),
   handler: function(direction) {
-    console.log('Rule 2 beneath ' + direction);
+    // console.log('Rule 2 beneath ' + direction);
     if (direction === 'up') {
       document.getElementById("rules-type-title-text").innerText = rule2;
       document.getElementById("rules-type-title-number").innerText = '02';
@@ -128,7 +128,7 @@ var arriveAtRule2Beneath = new Waypoint({
 var arriveAtRule3 = new Waypoint({
   element: document.getElementById('rule-3'),
   handler: function(direction) {
-    console.log('Rule 3 ' + direction);
+    // console.log('Rule 3 ' + direction);
     document.getElementById("rules-type-title-text").innerText = rule3;
     document.getElementById("rules-type-title-number").innerText = '03';
     if (direction === 'down') {
@@ -143,7 +143,7 @@ var arriveAtRule3 = new Waypoint({
 var arriveAtRule3Beneath = new Waypoint({
   element: document.getElementById('rule-4'),
   handler: function(direction) {
-    console.log('Rule 3 beneath ' + direction);
+    // console.log('Rule 3 beneath ' + direction);
     if (direction === 'up') {
       document.getElementById("rules-type-title-text").innerText = rule3;
       document.getElementById("rules-type-title-number").innerText = '03';
@@ -155,7 +155,7 @@ var arriveAtRule3Beneath = new Waypoint({
 var arriveAtRule4 = new Waypoint({
   element: document.getElementById('rule-4'),
   handler: function(direction) {
-    console.log('Rule 4 ' + direction);
+    // console.log('Rule 4 ' + direction);
     document.getElementById("rules-type-title-text").innerText = rule4;
     document.getElementById("rules-type-title-number").innerText = '04';
     if (direction === 'down') {
@@ -170,7 +170,7 @@ var arriveAtRule4 = new Waypoint({
 var arriveAtRule4Beneath = new Waypoint({
   element: document.getElementById('rule-5'),
   handler: function(direction) {
-    console.log('Rule 4 beneath ' + direction);
+    // console.log('Rule 4 beneath ' + direction);
     if (direction === 'up') {
       document.getElementById("rules-type-title-text").innerText = rule4;
       document.getElementById("rules-type-title-number").innerText = '04';
@@ -182,7 +182,7 @@ var arriveAtRule4Beneath = new Waypoint({
 var arriveAtRule5 = new Waypoint({
   element: document.getElementById('rule-5'),
   handler: function(direction) {
-    console.log('Rule 5 ' + direction);
+    // console.log('Rule 5 ' + direction);
     document.getElementById("rules-type-title-text").innerText = rule5;
     document.getElementById("rules-type-title-number").innerText = '05';
     if (direction === 'down') {
@@ -197,7 +197,7 @@ var arriveAtRule5 = new Waypoint({
 var arriveAtRule5Beneath = new Waypoint({
   element: document.getElementById('rule-6'),
   handler: function(direction) {
-    console.log('Rule 5 beneath ' + direction);
+    // console.log('Rule 5 beneath ' + direction);
     if (direction === 'up') {
       document.getElementById("rules-type-title-text").innerText = rule5;
       document.getElementById("rules-type-title-number").innerText = '05';
@@ -209,7 +209,7 @@ var arriveAtRule5Beneath = new Waypoint({
 var arriveAtRule6 = new Waypoint({
   element: document.getElementById('rule-6'),
   handler: function(direction) {
-    console.log('Rule 6 ' + direction);
+    // console.log('Rule 6 ' + direction);
     document.getElementById("rules-type-title-text").innerText = rule6;
     document.getElementById("rules-type-title-number").innerText = '06';
     if (direction === 'down') {

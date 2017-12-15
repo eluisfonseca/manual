@@ -66,7 +66,7 @@ var waypointGentMenuBeneath = new Waypoint({
       clearMenu();
       document.getElementById('gent-button').className += " active";
     }
-    console.log('You have scrolled to gent section from beneath');
+    // console.log('You have scrolled to gent section from beneath');
   },
   offset: '60%'
 });
@@ -81,7 +81,7 @@ var waypointBaralho = new Waypoint({
         document.getElementById('first-menu-mobile').className += " fixed";
       }
     }
-    console.log('You have scrolled to baralho');
+    // console.log('You have scrolled to baralho');
   },
   offset: '70%'
 })
@@ -104,7 +104,7 @@ var waypointBaralhoUpwards = new Waypoint({
 var waypointDesignersCard = new Waypoint({
   element: document.getElementById('designers-card'),
   handler: function(direction) {
-    console.log('You have scrolled to cartas content comming ' + direction);
+    // console.log('You have scrolled to cartas content comming ' + direction);
     document.getElementById("card-type-title").innerText = 'designers';
     if (direction === 'down') {
       // document.getElementById('card-menu').className = document.getElementById('card-menu').className.replace(/ fixed/g,'');
@@ -121,7 +121,7 @@ var waypointDesignersCard = new Waypoint({
 var waypointDesignersCardUp = new Waypoint({
   element: document.getElementById('managers-card'),
   handler: function(direction) {
-    console.log('You have scrolled to designer from beneath. Direction: ' + direction);
+    // console.log('You have scrolled to designer from beneath. Direction: ' + direction);
     if (direction === 'up') {
       document.getElementById("card-type-title").innerText = 'designers';
     }
@@ -132,7 +132,7 @@ var waypointDesignersCardUp = new Waypoint({
 var waypointManagersCard = new Waypoint({
   element: document.getElementById('managers-card'),
   handler: function(direction) {
-    console.log('You have scrolled to managers cartas comming ' + direction);
+    // console.log('You have scrolled to managers cartas comming ' + direction);
     document.getElementById("card-type-title").innerText = 'managers';
     if (direction === 'down') {
       // document.getElementById('card-menu').className = document.getElementById('card-menu').className.replace(/ fixed/g,'');
@@ -147,7 +147,7 @@ var waypointManagersCard = new Waypoint({
 var waypointManagersCardUp = new Waypoint({
   element: document.getElementById('developers-card'),
   handler: function(direction) {
-    console.log('You have scrolled to managers from beneath. Direction: ' + direction);
+    // console.log('You have scrolled to managers from beneath. Direction: ' + direction);
     if (direction === 'up') {
       document.getElementById("card-type-title").innerText = 'managers';
     }
@@ -159,7 +159,7 @@ var waypointDevelopersCard = new Waypoint({
   element: document.getElementById('developers-card'),
   handler: function(direction) {
     document.getElementById("card-type-title").innerText = 'developers';
-    console.log('You have scrolled to developers cartas comming ' + direction);
+    // console.log('You have scrolled to developers cartas comming ' + direction);
     if (direction === 'down') {
       // document.getElementById('card-menu').className = document.getElementById('card-menu').className.replace(/ fixed/g,'');
       if (document.getElementById('card-menu').className.indexOf(' fixed') == -1) {
@@ -173,7 +173,7 @@ var waypointDevelopersCard = new Waypoint({
 var waypointDevelopersCardUp = new Waypoint({
   element: document.getElementById('condicionantes-card'),
   handler: function(direction) {
-    console.log('You have scrolled to developers from beneath. Direction: ' + direction);
+    // console.log('You have scrolled to developers from beneath. Direction: ' + direction);
     if (direction === 'up') {
       document.getElementById("card-type-title").innerText = 'developers';
     }
@@ -184,7 +184,7 @@ var waypointDevelopersCardUp = new Waypoint({
 var waypointCondicionantesCard = new Waypoint({
   element: document.getElementById('condicionantes-card'),
   handler: function(direction) {
-    console.log('You have scrolled to condicionantes cartas comming ' + direction);
+    // console.log('You have scrolled to condicionantes cartas comming ' + direction);
     if (direction === 'down') {
       // document.getElementById('card-menu').className = document.getElementById('card-menu').className.replace(/ fixed/g,'');
       document.getElementById("card-type-title").innerText = 'condicionantes';
@@ -199,7 +199,7 @@ var waypointCondicionantesCard = new Waypoint({
 var waypointCondicionantesCardUp = new Waypoint({
   element: document.getElementById('condicionantes-card'),
   handler: function(direction) {
-    console.log('You have scrolled to condicionantes from beneath. Direction: ' + direction);
+    // console.log('You have scrolled to condicionantes from beneath. Direction: ' + direction);
     if (direction === 'up') {
       document.getElementById("card-type-title").innerText = 'condicionantes';
       if (document.getElementById('card-menu').className.indexOf(' fixed') == -1) {
@@ -216,7 +216,7 @@ var waypointCondicionantesCardMenuBeneath = new Waypoint({
       clearMenu();
       document.getElementById('baralho-button').className += " active";
     }
-    console.log('You have scrolled to condicionantes on the baralho section');
+    // console.log('You have scrolled to condicionantes on the baralho section');
   },
   offset: '50%'
 });
@@ -230,7 +230,7 @@ var waypointAccao = new Waypoint({
     if (document.getElementById('first-menu-mobile').className.indexOf(' fixed') == -1) {
       document.getElementById('first-menu-mobile').className += " fixed";
     }
-    console.log('You have scrolled to accao');
+    // console.log('You have scrolled to accao');
   },
   offset: 80
 });
@@ -238,7 +238,7 @@ var waypointAccao = new Waypoint({
 var waypointAccaoUpwards = new Waypoint({
   element: document.getElementById('accao'),
   handler: function(direction) {
-    console.log('You have scrolled to accao coming up');
+    // console.log('You have scrolled to accao coming up');
     if(direction === 'up') {
       clearMenu();
       document.getElementById('accao-button').className += " active";
@@ -252,7 +252,7 @@ var waypointAccaoUpwards = new Waypoint({
 
 
 // MENU BUTTON SCROLL
-var scroll = new Scroll(document.body);
+// var scroll = new Scroll(document.body);
 
 // document.getElementById('gent-button').onclick = function () {
 //   clearMenu();
@@ -294,13 +294,13 @@ function cardMenuPress(type) {
   var myElement = document.getElementById(type+'-card');
   var subjectRectFrom = container.getBoundingClientRect();
   var subjectRectTo = myElement.getBoundingClientRect();
-  console.log(subjectRectFrom.top + document.documentElement.scrollTop, subjectRectTo.top + document.documentElement.scrollTop);
+  // console.log(subjectRectFrom.top + document.documentElement.scrollTop, subjectRectTo.top + document.documentElement.scrollTop);
   parseCardsDropdownMenu();
   // scroll.to(subjectRectFrom.top + document.documentElement.scrollTop, subjectRectTo.top + document.documentElement.scrollTop - 210).then(function () {
   //   // done scrolling to the element
   //   document.getElementById("card-toggle").checked = false;
   //   document.getElementById("card-type-title").innerText = type;
-  //   console.log('fui para' + type);
+    // console.log('fui para' + type);
   // });
 }
 
@@ -343,7 +343,7 @@ $(document).ready(function(){
   });
 
   $(".dropdown-option").on('click', function(event) {
-    console.log('asda');
+    // console.log('asda');
     // Make sure this.hash has a value before overriding default behavior
     event.preventDefault();
     var label;
