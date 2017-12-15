@@ -83,4 +83,147 @@
       }
     }
   }
+
+  @include media('>=desktop') {
+    display: flex;
+
+    .banner {
+      height: auto;
+    }
+
+    .content {
+      align-items: center;
+      display: flex;
+      padding: 0 10%;
+
+      p {
+        font-family: 'din';
+      }
+    }
+
+    .rules-desktop {
+
+      > div {
+        display: flex;
+        align-items: center;
+
+        > div {
+          flex-basis: 50%;
+        }
+      }
+
+      .rules-title-container {
+        padding: 0 70px;
+
+        h1 {
+          color: $white;
+          font-family: 'din-bold';
+          font-size: 24px;
+          letter-spacing: 3.13px;
+          line-height: 29px;
+          padding-bottom: 20px;
+          text-transform: uppercase;
+  
+          .rules-title-number {
+            margin-right: 38px;
+          }
+        }
+      }
+
+      .rule-container {
+        min-height: calc(100vh - 80px);
+        padding: 100px 70px;
+        display: flex;
+        align-items: center;
+        
+        .number {
+          display: none;
+        }
+  
+        .text {
+          color: $white;
+          margin: 0;
+          letter-spacing: 1.6px;
+          font-family: 'din';
+          font-size: 20px;
+          letter-spacing: 2px;
+          padding: 0;
+          line-height: 28px;
+        }
+  
+        &:after {
+          display: none;
+        }
+  
+        &:last-child {
+          height: auto;
+          min-height: calc(100vh - 80px);
+          padding: 0 70px;
+  
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .rules-desktop-menu {
+      padding: 224px 70px;
+
+      a {
+        display: block;
+        color: $white;
+        font-family: 'din-bold';
+        font-size: 24px;
+        letter-spacing: 3.13px;
+        line-height: 29px;
+        padding-bottom: 20px;
+        text-transform: uppercase;
+
+        .rule-number {
+          margin-right: 38px;
+        }
+
+        &:hover {
+          .rule-number {
+            color: $red
+          }
+        }
+
+        &.active {
+          .rule-number {
+            color: $red
+          }
+        }
+      }
+    }
+
+    .rules {
+      background: $black2;
+
+      .rule-container {
+        padding: 100px 70px;
+
+        &:after {
+          display: none;
+        }
+
+        .number {
+          display: none;
+        }
+
+        .text {
+          font-size: 20px;
+          letter-spacing: 2px;
+          padding: 0;
+          line-height: 28px;
+        }
+
+        &:last-child {
+          min-height: calc(100vh - 80px);
+          padding: 100px 70px;
+        }
+      }
+    }
+  }
 }

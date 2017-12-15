@@ -220,3 +220,17 @@ var arriveAtRule6 = new Waypoint({
   },
   offset: 160
 });
+
+var arriveAtRule6 = new Waypoint({
+  element: document.getElementById('rule-6'),
+  handler: function(direction) {
+    document.getElementById("rules-type-title-text").innerText = rule6;
+    document.getElementById("rules-type-title-number").innerText = '06';
+    if (direction === 'down') {
+      if (document.getElementById('rules-menu').className.indexOf(' fixed') == -1) {
+        document.getElementById('rules-menu').className += " fixed";
+      }
+    }
+  },
+  offset: 'bottom-in-view'
+});

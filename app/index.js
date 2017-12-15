@@ -448,4 +448,13 @@ $(document).ready(function(){
       }, timer);
     }
   });
+
+  $('.rules-desktop-menu a').on('click', function() {
+    if (!$(this).hasClass('active')) {
+      let $self = $(this);
+
+      $('.menu-cartas a.active').removeClass('active');
+      $self.addClass('active');
+    }
+  });
 });
