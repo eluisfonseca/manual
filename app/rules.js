@@ -14,43 +14,43 @@ function stickRulesDropdownMenu() {
   }
 }
 
-function rulesMenuPress(number, text) {
-  var container = document.getElementById('accao');
-  var targetElement = document.getElementById('rule-' + number);
-  var subjectRectFrom = container.getBoundingClientRect();
-  var subjectRectTo = targetElement.getBoundingClientRect();
-  scrollRules.to(subjectRectFrom.top + document.documentElement.scrollTop, subjectRectTo.top + document.documentElement.scrollTop - 160).then(function () {
-    // done scrolling to the element
-    document.getElementById("rules-toggle").checked = false;
-    document.getElementById("rules-type-title-text").innerText = text;
-    document.getElementById("rules-type-title-number").innerText = '0'+number;
-    console.log('fui para rule-' + number);
-  });
-}
+// function rulesMenuPress(number, text) {
+//   var container = document.getElementById('accao');
+//   var targetElement = document.getElementById('rule-' + number);
+//   var subjectRectFrom = container.getBoundingClientRect();
+//   var subjectRectTo = targetElement.getBoundingClientRect();
+//   scrollRules.to(subjectRectFrom.top + document.documentElement.scrollTop, subjectRectTo.top + document.documentElement.scrollTop - 160).then(function () {
+//     // done scrolling to the element
+//     document.getElementById("rules-toggle").checked = false;
+//     document.getElementById("rules-type-title-text").innerText = text;
+//     document.getElementById("rules-type-title-number").innerText = '0'+number;
+//     console.log('fui para rule-' + number);
+//   });
+// }
 
-document.getElementById("rule-1-button").addEventListener("click", function( event ) {
-  rulesMenuPress(1, rule1);
-}, false);
+// document.getElementById("rule-1-button").addEventListener("click", function( event ) {
+//   rulesMenuPress(1, rule1);
+// }, false);
 
-document.getElementById("rule-2-button").addEventListener("click", function( event ) {
-  rulesMenuPress(2, rule2);
-}, false);
+// document.getElementById("rule-2-button").addEventListener("click", function( event ) {
+//   rulesMenuPress(2, rule2);
+// }, false);
 
-document.getElementById("rule-3-button").addEventListener("click", function( event ) {
-  rulesMenuPress(3, rule3);
-}, false);
+// document.getElementById("rule-3-button").addEventListener("click", function( event ) {
+//   rulesMenuPress(3, rule3);
+// }, false);
 
-document.getElementById("rule-4-button").addEventListener("click", function( event ) {
-  rulesMenuPress(4, rule4);
-}, false);
+// document.getElementById("rule-4-button").addEventListener("click", function( event ) {
+//   rulesMenuPress(4, rule4);
+// }, false);
 
-document.getElementById("rule-5-button").addEventListener("click", function( event ) {
-  rulesMenuPress(5, rule5);
-}, false);
+// document.getElementById("rule-5-button").addEventListener("click", function( event ) {
+//   rulesMenuPress(5, rule5);
+// }, false);
 
-document.getElementById("rule-6-button").addEventListener("click", function( event ) {
-  rulesMenuPress(6, rule6);
-}, false);
+// document.getElementById("rule-6-button").addEventListener("click", function( event ) {
+//   rulesMenuPress(6, rule6);
+// }, false);
 
 // WAYPOINTS
 var unfixRulesMenu = new Waypoint({
@@ -80,7 +80,7 @@ var arriveAtRule1 = new Waypoint({
     }
     console.log('reached accao from ' + direction);
   },
-  offset: 80
+  offset: -280
 });
 
 var arriveAtRule1Beneath = new Waypoint({
@@ -90,6 +90,9 @@ var arriveAtRule1Beneath = new Waypoint({
     if (direction === 'up') {
       document.getElementById("rules-type-title-text").innerText = rule1;
       document.getElementById("rules-type-title-number").innerText = '01';
+      if (document.getElementById('rules-menu').className.indexOf(' fixed') == -1) {
+        document.getElementById('rules-menu').className += " fixed";
+      }
     }
   },
   offset: '70%'
