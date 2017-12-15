@@ -100,7 +100,6 @@
       background-size: 90% auto;
       padding-left: 30px;
       margin-bottom: 80px;
-      // padding-top: 110px;
 
       .description {
         font-size: 16px;
@@ -148,19 +147,80 @@
 
     .cartas {
       padding-top: 0;
+      position: relative;
 
       .card-container {
-        align-items: flex-end;
-        background-size: 50%;
-        background-position-x: 90%;
+        background-position-x: 85%;
         background-position-y: calc(100% - 100px) !important;
-        display: flex;
+        background-size: 50%;
+        display: none;
         height: 100vh;
+        padding-left: 60px;
+        pointer-events: none;
+        position: relative;
 
         .description {
+          bottom: 0;
           margin-bottom: 30%;
+          padding-right: 30%;
+          pointer-events: none;
+          position: absolute;
+        }
+
+        &.active {
+          display: block;
+        }
+
+        &.prepare-to-fade-in {
+          display: block;
+          opacity: 0;
+        }
+
+        &.fade-in {
+          animation: fade-in .3s;
+        }
+
+        &.fade-out {
+          animation: fade-out .3s;
+        }
+      }
+
+      .menu-cartas {
+        position: absolute;
+        left: 60px;
+        top: 50vh;
+        transform: translateY(-200%);
+
+        nav {
+          display: flex;
+          flex-direction: column;
+
+          a {
+            color: $white;
+            cursor: pointer;
+            font-family: 'din';
+            font-size: 14px;
+            letter-spacing: 5px;
+            line-height: 17px;
+            margin-top: 14px;
+            text-transform: uppercase;
+
+            &.active {
+              font-family: 'din-bold';
+            }
+          }
         }
       }
     }
   }
+}
+
+@keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

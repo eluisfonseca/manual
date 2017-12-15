@@ -16,7 +16,7 @@ const rule6 = 'Vitória!'
 
 function clearMenu() {
   var items = document.getElementsByClassName("mobile-menu-item");
-  
+
   for (let i=0; i<items.length; i++) {
     items[i].className = items[i].className.replace(/active/g,'');
   }
@@ -335,7 +335,7 @@ $(document).ready(function(){
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 800, function(){
-   
+
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
@@ -427,5 +427,23 @@ $(document).ready(function(){
     $('html, body').animate({
       scrollTop: $(target).offset().top + offset
     }, 800, function(){});
+  });
+
+  $('.menu-cartas a').on('click', function() {
+    if (!$(this).hasClass('active')) {
+      let $self = $(this);
+
+      $('.menu-cartas a.active').removeClass('active');
+      $self.addClass('active');
+
+      $('.card-container.active').addClass('fade-out');
+      window.setTimeout(() => {
+        $('.card-container.active').removeClass('active fade-out');
+        $('#' + $self.data('id')).addClass('prepare-to-fade-in fade-in');
+        window.setTimeout(() => {
+          $('#' + $self.data('id')).addClass('active').removeClass('fade-in prepare-to-fade-in');
+        }, 200);
+      }, 300);
+    }
   });
 });
