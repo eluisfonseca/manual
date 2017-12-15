@@ -6,6 +6,7 @@
 import 'styles/index.scss';
 import { log } from 'util';
 import 'rules.js'
+import 'noframework.waypoints.min.js'
 
 const rule1 = 'Preparação do Jogo';
 const rule2 = 'Área de Trabalho';
