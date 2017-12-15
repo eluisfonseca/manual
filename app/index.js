@@ -429,6 +429,8 @@ $(document).ready(function(){
     }, 800, function(){});
   });
 
+  const timer = 300;
+
   $('.menu-cartas a').on('click', function() {
     if (!$(this).hasClass('active')) {
       let $self = $(this);
@@ -442,8 +444,8 @@ $(document).ready(function(){
         $('#' + $self.data('id')).addClass('prepare-to-fade-in fade-in');
         window.setTimeout(() => {
           $('#' + $self.data('id')).addClass('active').removeClass('fade-in prepare-to-fade-in');
-        }, 200);
-      }, 300);
+        }, timer);
+      }, timer);
     }
   });
 });

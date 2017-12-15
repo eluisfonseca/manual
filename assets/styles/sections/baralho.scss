@@ -176,13 +176,16 @@
           opacity: 0;
         }
 
+        $timer: .5s;
+        
         &.fade-in {
-          animation: fade-in .3s;
+          animation: fade-in $timer;
         }
 
         &.fade-out {
-          animation: fade-out .3s;
+          animation: fade-out $timer;
         }
+
       }
 
       .menu-cartas {
