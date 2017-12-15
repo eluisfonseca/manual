@@ -343,6 +343,7 @@ $(document).ready(function(){
   });
 
   $(".dropdown-option").on('click', function(event) {
+    console.log('asda');
     // Make sure this.hash has a value before overriding default behavior
     event.preventDefault();
     var label;

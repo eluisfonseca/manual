@@ -234,3 +234,9 @@ var arriveAtRule6 = new Waypoint({
   },
   offset: 'bottom-in-view'
 });
+
+$(document).ready(function() {
+  document.getElementById('rules-menu').className = document.getElementById('rules-menu').className.replace(/ fixed/g,'');
+  document.getElementById("rules-type-title-text").innerText = rule1;
+  document.getElementById("rules-type-title-number").innerText = '01';
+});
