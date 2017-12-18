@@ -63,6 +63,8 @@
         line-height: 24px;
         letter-spacing: 1.6px;
         font-family: 'din';
+        white-space: normal;
+        overflow: auto;
       }
 
       &:after {
@@ -123,7 +125,7 @@
           line-height: 29px;
           padding-bottom: 20px;
           text-transform: uppercase;
-  
+
           .rules-title-number {
             margin-right: 38px;
           }
@@ -135,11 +137,11 @@
         padding: 100px 70px;
         display: flex;
         align-items: center;
-        
+
         .number {
           display: none;
         }
-  
+
         .text {
           color: $white;
           margin: 0;
@@ -150,16 +152,16 @@
           padding: 0;
           line-height: 28px;
         }
-  
+
         &:after {
           display: none;
         }
-  
+
         &:last-child {
           height: auto;
           min-height: calc(100vh - 80px);
           padding: 0 70px;
-  
+
           &:after {
             display: none;
           }

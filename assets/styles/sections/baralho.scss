@@ -50,6 +50,8 @@
       line-height: 24px;
       letter-spacing: 1.6px;
       font-family: 'din';
+      white-space: normal;
+      overflow: auto;
     }
   }
 
@@ -111,6 +113,8 @@
         font-family: 'baskerville';
         width: 65%;
         min-width: 230px;
+        white-space: normal;
+        overflow: auto;
       }
     }
   }
@@ -177,7 +181,7 @@
         }
 
         $timer: .5s;
-        
+
         &.fade-in {
           animation: fade-in $timer;
         }
